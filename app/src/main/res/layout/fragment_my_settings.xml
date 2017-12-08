@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="listener"
+            type="com.example.bloold.buildp.ui.fragments.MySettingsFragment"/>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:background="@color/colorSettingsGray"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:text="@string/notifications"/>
+                <include layout="@layout/layout_line"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/scObjectQuestNear"
+                        android:text="@string/object_quest_near"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <include layout="@layout/layout_line"/>
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/scFavObjectNear"
+                        android:text="@string/fav_object_near"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <include layout="@layout/layout_line"/>
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/scNewMessage"
+                        android:text="@string/new_message"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <include layout="@layout/layout_line"/>
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/scNewNotification"
+                        android:text="@string/new_notification"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <include layout="@layout/layout_line"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:background="@color/colorSettingsGray"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:text="@string/cache"/>
+                <include layout="@layout/layout_line"/>
+                <TextView
+                    android:text="@string/clear_image_cache"
+                    android:background="?selectableItemBackground"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:onClick="@{listener::onClearImageCacheClick}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </ScrollView>
+        <FrameLayout
+            android:id="@+id/flLoading"
+            android:clickable="true"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/loadingBackground">
+            <ProgressBar
+                style="?android:progressBarStyleLarge"
+                android:indeterminate="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </FrameLayout>
+</layout>

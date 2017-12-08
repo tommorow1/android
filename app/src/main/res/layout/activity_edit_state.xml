@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="listener"
+            type="com.example.bloold.buildp.ui.EditStateActivity"/>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:padding="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/state_item"
+                    style="@style/StyleTitle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/state_description"
+                    style="@style/StyleSubTitle" />
+                <TextView
+                    android:id="@+id/tvConditionCriteria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/condition_criteria"/>
+                <EditText
+                    android:id="@+id/etStateDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/state_description"
+                    style="@style/StyleEditTextRect" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/state_condition"
+                    style="@style/StyleSubTitle" />
+                <Spinner
+                    android:id="@+id/spConditionMark"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/add_photo_title"
+                    style="@style/StyleSubTitle" />
+                <TextView
+                    android:id="@+id/tvPhotoRules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/add_photo_rules"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvPhotos"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:layout_height="200dp"
+                    tools:listitem="@layout/item_photo_removable"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{listener::onAddPhotoClick}"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    style="@style/RoundedBlueBtnStyle"
+                    android:text="@string/add" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/add_video_title"
+                    style="@style/StyleSubTitle" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvVideos"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:layout_height="200dp"
+                    tools:listitem="@layout/item_photo_removable"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{listener::onAddVideoClick}"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    style="@style/RoundedBlueBtnStyle"
+                    android:text="@string/add" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/add_audio_title"
+                    style="@style/StyleSubTitle" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvAudios"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:layout_height="200dp"
+                    tools:listitem="@layout/item_audio_removable"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{listener::onAddAudioClick}"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    style="@style/RoundedBlueBtnStyle"
+                    android:text="@string/add" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <FrameLayout
+            android:id="@+id/flLoading"
+            android:clickable="true"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/loadingBackground">
+            <ProgressBar
+                style="?android:progressBarStyleLarge"
+                android:indeterminate="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </FrameLayout>
+</layout>

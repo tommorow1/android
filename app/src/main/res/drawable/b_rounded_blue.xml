@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/btn_radius"/>
+            <solid android:color="@color/colorGray"/>
+        </shape>
+    </item>
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/btn_radius"/>
+            <solid android:color="@color/colorBtnBlue"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true" >
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/btn_radius"/>
+            <solid android:color="@color/colorBtnBluePressed"/>
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/btn_radius"/>
+            <solid android:color="@color/colorBtnBlue"/>
+        </shape>
+    </item>
+    <item >
+        <shape android:shape="rectangle"  >
+            <corners android:radius="@dimen/btn_radius"/>
+            <solid android:color="@color/colorBtnBlue"/>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    tools:context=".profile.RegistrationActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Регистрация через соцсети"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivVk"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:paddingTop="3dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginRight="23.5dp"
+                    app:srcCompat="@drawable/vk" />
+
+                <ImageView
+                    android:id="@+id/ivFb"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:adjustViewBounds="true"
+                    android:paddingTop="3dp"
+                    android:layout_marginRight="23.5dp"
+                    app:srcCompat="@drawable/fb" />
+
+                <ImageView
+                    android:id="@+id/ivOk"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:paddingTop="3dp"
+                    app:srcCompat="@drawable/ok" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etFirstName"
+                android:layout_width="317dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/white"
+                android:ems="10"
+                android:hint="Имя"
+                android:inputType="textPersonName"
+                android:paddingBottom="15dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#ffffff"
+                android:textColorLink="@android:color/holo_red_light"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                android:layout_width="317dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/white"
+                android:ems="10"
+                android:hint="Фамилия"
+                android:inputType="textPersonName"
+                android:paddingBottom="15dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#ffffff"
+                android:textColorLink="@android:color/holo_red_light"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/etRegEmail"
+                android:layout_width="317dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/white"
+                android:ems="10"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="15dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#ffffff"
+                android:textColorLink="@android:color/holo_red_light"
+                android:textSize="22sp" />
+            <LinearLayout
+                android:layout_width="317dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etRegPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:backgroundTint="@android:color/white"
+                        android:hint="Пароль"
+                        android:inputType="textPassword"
+                        android:paddingBottom="15dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="#ffffff"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/ivRegSeePassword"
+                        android:layout_width="62dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="top"
+                        android:paddingBottom="15dp"
+                        android:src="@drawable/ic_eye" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="324dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/cbAgr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@android:color/white"
+                    android:buttonTint="@android:color/white"
+                    android:checked="true"
+                    android:textAlignment="center"
+                    android:text="Я согласен с условиями"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@color/colorAccent"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/etRegAgreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:text="Пользовательского соглашения"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@color/colorAccent"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="317dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.01"
+                    android:background="@drawable/rounded_button"
+                    android:drawableRight="@drawable/ic_menu_red_arrow"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Регистрация"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorRed"
+                    android:textColorLink="@color/colorRed"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible"/>
+
+</android.support.constraint.ConstraintLayout>

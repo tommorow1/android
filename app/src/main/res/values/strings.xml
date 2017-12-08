@@ -1,0 +1,241 @@
+<resources>
+    <string name="app_name">Руин.нет</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- menu -->
+    <string name="action_settings">Settings</string>
+    <string name="action_find">Find</string>
+
+    <!-- Карточка объекта -->
+    <string name="doc_code">Шифр документа</string>
+
+    <!-- Экран поиска -->
+    <string name="filters">Фильтры</string>
+    <string name="object_search">Поиск объекта</string>
+    <string name="show">Показать</string>
+    <string name="extra_static_filters">Особые приметы</string>
+    <string name="nothing_to_show">Ничего не найдено</string>
+    <string name="filter_unesco">Принадлежит к ЮНЕСКО</string>
+    <string name="filter_vip">Особо ценный объект</string>
+    <string name="filter_history">Историческое поселение</string>
+    <string name="filter_quest">Участвует в квесте</string>
+    <string name="filter_vote">Участвует в голосовании</string>
+
+    <!-- Карта -->
+    <string name="all">Все</string>
+    <string name="no_materials">Нет материалов</string>
+    <string name="my_location">Моё местоположение</string>
+    <string name="need_gps_permission">Для работы приложения необходим доступ к GPS. Разрешить доступ?</string>
+    <string name="gps_not_enabled">Невозможно получить доступ к GPS. Включите определение координат и попробуйте ещё раз.</string>
+    <string name="need_set_origin_location">Укажите начальную точку маршрута</string>
+    <string name="need_set_destination_location">Укажите конечную точку маршрута</string>
+    <string name="object_not_found">Объект не найден</string>
+    <string name="cant_get_route">Невозможно построить маршрут, попробуйте позже</string>
+    <string name="meters">%d м</string>
+    <string name="km">%d км</string>
+    <string name="no_route">Нет маршрута</string>
+    <string name="enable">Включить</string>
+
+    <!-- Редактирование -->
+    <string name="edit_object_title">Редактирование объекта</string>
+    <string name="add_object_item">Добавление объекта</string>
+    <string name="route_item">Проложить маршрут</string>
+    <string name="state_item">Состояние объекта</string>
+    <string name="photo_video_audio_item">Фото, видео, аудио</string>
+    <string name="main_info_item">Основные сведения</string>
+    <string name="archive_item">Архивные материалы</string>
+    <string name="science_pub_info">Научные публикации</string>
+
+    <!-- Редактирование состояния -->
+    <string name="state_description">Описание состояния</string>
+    <string name="state_condition">Оценка состояния</string>
+    <string name="add_photo_title">Добавить фотографии</string>
+    <string name="add_video_title">Добавить видео</string>
+    <string name="add_audio_title">Добавить аудио</string>
+    <string name="condition_criteria"><a href="https://ruin.net.ru/object-condition-terms/?clear_for_app=y">Критерии оценки состояния</a></string>
+    <string name="add_photo_rules"><a href="https://ruin.net.ru/recommendations/?clear_for_app=y">Правила добавления фотографий</a></string>
+    <string name="add">Добавить</string>
+    <string name="audio_record">Аудиозапись</string>
+    <string name="youtube_link">Сссылка на youtube видео</string>
+    <string name="need_only_youtube_link">Можно использовать только ссылки на youtube</string>
+    <string name="choose_condition">Выберите состояние</string>
+
+    <!-- Добавление объекта -->
+    <string name="object_name">Название объекта</string>
+    <string name="folk_object_name">Народное название объекта</string>
+    <string name="address">Адрес</string>
+    <string name="edit_object_rules"><a href="https://ruin.net.ru/rules-add/?clear_for_app=y">Правила добавления объектов</a></string>
+    <string name="go_to_full_form"><u>Перейти к полной форме</u></string>
+    <string name="need_fill_this_field">Для добавления объекта необходимо заполнить это поле</string>
+    <string name="need_address_for_adding_object">Для добавления объекта введите адрес и выберите место на карте</string>
+    <string name="object_added">Объект успешно добавлен</string>
+    <string name="object_edited">Объект успешно отредактирован</string>
+
+    <!-- Редактирование основных сведений -->
+    <string name="main_info_title">Основные сведения</string>
+    <string name="object_description">Описание объекта</string>
+    <string name="architect">Архитектор / скульптор</string>
+    <string name="build_date">Дата создания объекта</string>
+    <string name="date_comment">Комментарий к дате</string>
+    <string name="rebuild_date">Дата перестройки</string>
+    <string name="unesco_object">Является объектом ЮНЕСКО</string>
+    <string name="important_object">Является особо ценнным объектом</string>
+    <string name="history_colony">Является историческим поселением</string>
+    <string name="comment">Комментарий</string>
+    <string name="object_type">Вид объекта</string>
+    <string name="choose">Выберите</string>
+    <string name="object_category">Категория объекта</string>
+    <string name="protection_status">Охранный статус объект</string>
+
+    <!-- Архивные материалы -->
+    <string name="document_name">Наименование документа</string>
+    <string name="archive_name">Наименование архива</string>
+    <string name="document_code">Шифр документа</string>
+    <string name="comments">Комментарии</string>
+    <string name="upload_file">Загрузить файл</string>
+    <string name="code_must_be_number">Шифр документа должен быть числом</string>
+
+    <!-- Научные публикации -->
+    <string name="publication_name">Название публикации</string>
+    <string name="add_cover">Добавить обложку</string>
+    <string name="change_cover">Изменить обложку</string>
+    <string name="add_publication">Добавить публикацию</string>
+
+    <!-- Выбор точки на карте -->
+    <string name="choose_location">Выбор местоположения</string>
+
+    <!-- Просмотр изображения -->
+    <string name="photo">Фото</string>
+
+    <!-- Выбор изображения -->
+    <string name="add_photo">Добавить фото</string>
+    <string name="open_gallery">Открыть галерею</string>
+    <string name="open_camera">Открыть камеру</string>
+    <string name="choose_application">Выберите приложение</string>
+    <string name="cant_create_image_file">Невозможно создать файл изображение, проверьте место на устройстве и попроуйте позже</string>
+    <string name="cant_convert_image_file">Невозможно сжать изображение для отправки, попробуйте выбрать другой файл изображения</string>
+    <string name="no_capture_image">Вы не выбрали изображение</string>
+
+    <!-- navigation drawer -->
+    <string name="navigation_drawer_object_in_map">Обьекты на карте</string>
+    <string name="navigation_drawer_catalog_object">Каталог обьектов</string>
+    <string name="quests">Квесты</string>
+    <string name="my_quests">Мои квесты</string>
+    <string name="my_settings">Мои настройки</string>
+    <string name="news">Новости</string>
+    <string name="about">О портале</string>
+    <string name="feedback">Обратная связь</string>
+    <string name="voting">Голосование</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="facebook_app_id">893853807441584</string>
+    <string name="fb_login_protocol_scheme">fb893853807441584</string>
+    <integer name="com_vk_sdk_AppId">6219142</integer>
+
+    <!-- Мои предложения -->
+    <string name="my_suggestions">Мои предложения</string>
+    <string name="suggestion_on_expert_checking">На проверке эксперта</string>
+    <string name="suggestion_approved">Одобрено</string>
+    <string name="suggestion_declined">Отклонено</string>
+    <string name="suggestion_status_moderation">На модерации</string>
+    <string name="suggestion_status_declined">Отклонено как нежелательное</string>
+    <string name="suggestion_status_approved">Одобрено</string>
+
+    <!-- Карточка предложения  -->
+    <string name="suggestions">Предложения</string>
+    <string name="object_changed">Внесены изменения в объект</string>
+    <string name="was">Было</string>
+    <string name="become">Стало</string>
+
+    <!-- Лента уведомлений -->
+    <string name="notifications">Уведомления</string>
+    <string name="no_notifications">Нет уведомлений</string>
+
+    <!-- Квесты -->
+    <string name="participate">Участвовать</string>
+    <string name="cancel_participate">Отказкаться от участия</string>
+    <string name="quests_active">Активные</string>
+    <string name="quests_finished">Пройденные</string>
+    <string name="quests_closed">Завершённые</string>
+
+    <!-- Карточка квеста -->
+    <string name="description">Описание</string>
+    <string name="objects">Объекты</string>
+    <string name="participants">Участники</string>
+    <string name="no_objects_in_quest">В квесте нет объектов</string>
+    <string name="no_participants">Ещё никто не присоединился к квесту. Будьте первым!</string>
+
+    <!-- Обратная связь -->
+    <string name="name">Имя</string>
+    <string name="email">Email</string>
+    <string name="phone">Телефон</string>
+    <string name="message">Сообщение</string>
+    <string name="choose_file">Выберите файл</string>
+    <string name="send">Отправить</string>
+    <string name="need_fill_email_or_phone">Необходимо заполнить Email или телефон</string>
+    <string name="need_input_message">Введите сообщение</string>
+    <string name="feedback_sent">Ваш отзыв отправлен. Спасибо за обратную связь!</string>
+
+    <!-- Избранное -->
+    <string name="favourite">Избранное</string>
+    <string name="no_favourite">Вы ещё ничего не добавили в избранное</string>
+    
+    <!-- Мои настройки -->
+    <string name="object_quest_near">Объект по квесту рядом</string>
+    <string name="fav_object_near">Объект из избранного рядом</string>
+    <string name="new_message">Новое сообщение</string>
+    <string name="new_notification">Новое уведомление</string>
+    <string name="clear_image_cache">Очистить кеш изображений</string>
+    <string name="cache">Кеш</string>
+    <string name="cache_cleared">Кеш изображений очищен</string>
+
+    <string-array name="spinner_choice_object_address">
+        <item>По обьекту</item>
+        <item>По адресу</item>
+    </string-array>
+
+    <string-array name="spinner_choice_region">
+        <item>Выберите область</item>
+        <item>Ростовская область</item>
+    </string-array>
+
+    <string-array name="chooseImage">
+        <item>Выбрать из галереи</item>
+        <item>Сделать фото</item>
+    </string-array>
+
+    <string name="profile_pick_photo">Загрузить фотографию</string>
+
+
+    <string name="find_by_name">http://ruinnet.idefa.ru/api_app/object/list/?select[0]=NAME&amp;select[]=DETAIL_PICTURE&amp;filter[0][?NAME]=%1$s</string>
+
+    <string name="find_by_egrn">http://ruinnet.idefa.ru/api_app/object/list/?select[]=NAME&amp;select[]=PROPERTY_EGRKN_NUMBER&amp;select[]=DETAIL_PICTURЕ&amp;filter[?PROPERTY_EGRKN_NUMBER]=%1$s</string>
+
+    <string name="find_by_address">http://ruinnet.idefa.ru/api_app/object/list/?select[]=NAME&amp;select[]=PROPERTY_ADDRESS&amp;select[]=DETAIL_PICTURE&amp;filter[?PROPERTY_ADDRESS]=%1$s</string>
+
+    <string name="title_activity_logging">LoggingActivity</string>
+    <string name="title_activity_login">Main2Activity</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
+    <string name="title_activity_restore">RestoreActivity</string>
+    <string name="title_activity_profile_settings">ProfileSettingsActivity</string>
+    <string name="title_activity_agreement">Пользовательское соглашение</string>
+    <string name="title_activity_list_objects">ListObjectsActivity</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- Общее -->
+    <string name="error_check_internet">Нет подключения к сети. Проверьте подключение и попробуйте позже</string>
+    <string name="server_error">Ошибка сервера. Обратитесь к разработчику или попробуйте позже</string>
+    <string name="google_services_error">Ошибка при обращении к Google Play Services. Попробуйте позже или обратитесь к разработчику</string>
+    <string name="need_write_external">Для прикрепления файла разрешите запись</string>
+    <string name="need_read_external">Для прикрепления файла разрешите доступ к файлам</string>
+    <string name="without_description">Без описания</string>
+    <string name="or">или</string>
+
+</resources>

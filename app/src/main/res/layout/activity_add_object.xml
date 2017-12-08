@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="listener"
+            type="com.example.bloold.buildp.ui.AddObjectActivity"/>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:padding="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_object_item"
+                    style="@style/StyleTitle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/object_name"
+                    style="@style/StyleSubTitle" />
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:singleLine="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/object_name"
+                    style="@style/StyleEditTextRect" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/folk_object_name"
+                    style="@style/StyleSubTitle" />
+                <EditText
+                    android:id="@+id/etFolkName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:singleLine="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/folk_object_name"
+                    style="@style/StyleEditTextRect" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/address"
+                    style="@style/StyleSubTitle" />
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{listener::onChooseAddressClick}"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/address"
+                    style="@style/StyleEditTextRect" />
+                <LinearLayout
+                    android:id="@+id/llFullBlock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/object_description"
+                        style="@style/StyleSubTitle" />
+                    <EditText
+                        android:id="@+id/etObjectDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:hint="@string/object_description"
+                        style="@style/StyleEditTextRect" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/architect"
+                        style="@style/StyleSubTitle" />
+                    <EditText
+                        android:id="@+id/etArchitect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:hint="@string/architect"
+                        style="@style/StyleEditTextRect" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/build_date"
+                        style="@style/StyleSubTitle" />
+                    <TextView
+                        android:id="@+id/tvBuildDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{listener::onBuildDateClick}"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:hint="@string/build_date"
+                        style="@style/StyleEditTextRect" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/date_comment"
+                        style="@style/StyleSubTitle" />
+                    <EditText
+                        android:id="@+id/etDateComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:hint="@string/date_comment"
+                        style="@style/StyleEditTextRect" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/rebuild_date"
+                        style="@style/StyleSubTitle" />
+                    <TextView
+                        android:id="@+id/tvReBuildDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{listener::onReBuildDateClick}"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:hint="@string/rebuild_date"
+                        style="@style/StyleEditTextRect" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/object_type"
+                        style="@style/StyleSubTitle" />
+                    <Spinner
+                        android:id="@+id/spObjectType"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/object_category"
+                        style="@style/StyleSubTitle" />
+                    <Spinner
+                        android:id="@+id/spObjectCategory"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/protection_status"
+                        style="@style/StyleSubTitle" />
+                    <Spinner
+                        android:id="@+id/spProtectionStatus"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/scUnesco"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/unesco_object"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/StyleSubTitle"/>
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/scImportantObject"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/important_object"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/StyleSubTitle"/>
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/scHistoryColonyObject"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/history_colony"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/StyleSubTitle"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAddObjectRules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorLink="@color/red"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/edit_object_rules"/>
+                <TextView
+                    android:id="@+id/tvFullForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{listener::onGoToFullFormClick}"
+                    android:layout_marginTop="@dimen/activity_vertical_margin_half"
+                    android:padding="@dimen/activity_vertical_margin_half"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/go_to_full_form"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{listener::onAddObjectClick}"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    style="@style/RoundedBlueBtnStyle"
+                    android:text="@string/add" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <FrameLayout
+            android:id="@+id/flLoading"
+            android:clickable="true"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/loadingBackground">
+            <ProgressBar
+                style="?android:progressBarStyleLarge"
+                android:indeterminate="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </FrameLayout>
+</layout>

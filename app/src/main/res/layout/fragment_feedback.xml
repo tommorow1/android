@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="listener"
+            type="com.example.bloold.buildp.ui.fragments.FeedbackFragment"/>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/email"
+                    style="@style/StyleEditTextRect" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/activity_vertical_margin_half"
+                    android:text="@string/or"/>
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:inputType="phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone"
+                    style="@style/StyleEditTextRect" />
+                <EditText
+                    android:id="@+id/etName"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/name"
+                    style="@style/StyleEditTextRect" />
+                <EditText
+                    android:id="@+id/etMessage"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/message"
+                    style="@style/StyleEditTextRect" />
+                <TextView
+                    android:id="@+id/etFile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:drawableStart="@drawable/ic_attachment"
+                    android:drawablePadding="@dimen/activity_vertical_margin_half"
+                    android:paddingTop="@dimen/activity_vertical_margin_half"
+                    android:paddingBottom="@dimen/activity_vertical_margin_half"
+                    android:onClick="@{listener::onChooseFileClick}"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/choose_file"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{listener::onSendClick}"
+                    android:layout_marginTop="16dp"
+                    style="@style/RoundedRedBtnStyle"
+                    android:text="@string/send" />
+
+            </LinearLayout>
+        </ScrollView>
+        <FrameLayout
+            android:id="@+id/flLoading"
+            android:clickable="true"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/loadingBackground">
+            <ProgressBar
+                style="?android:progressBarStyleLarge"
+                android:indeterminate="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+    </FrameLayout>
+</layout>

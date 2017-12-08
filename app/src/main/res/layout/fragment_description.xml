@@ -1,0 +1,15 @@
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.bloold.buildp.single.object.DescriptionFragment"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_vertical_margin"
+        android:text="@string/without_description"
+        android:id="@+id/tvDescription"/>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar_actionbar"
+    android:background="@color/colorPrimary"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:id="@+id/ivBack"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_gravity="left"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/tvTitle"
+            android:textSize="20sp"
+            android:paddingLeft="50dp"
+            android:visibility="gone"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:textColor="@color/vk_white"
+            android:text="Профиль пользователя"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ivCancel"
+            android:src="@drawable/ic_cross"
+            android:layout_marginLeft="16dp"
+            android:visibility="gone"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="right|end"/>
+
+    </FrameLayout>
+
+</android.support.v7.widget.Toolbar>

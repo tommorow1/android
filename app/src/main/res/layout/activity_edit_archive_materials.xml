@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="listener"
+            type="com.example.bloold.buildp.ui.EditArchiveMaterialsActivity"/>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:padding="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/archive_item"
+                    style="@style/StyleTitle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/document_name"
+                    style="@style/StyleSubTitle" />
+                <EditText
+                    android:id="@+id/etDocumentName"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/document_name"
+                    style="@style/StyleEditTextRect" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/archive_name"
+                    style="@style/StyleSubTitle" />
+                <EditText
+                    android:id="@+id/etArchiveName"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:inputType="textCapSentences"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/archive_name"
+                    style="@style/StyleEditTextRect" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/document_code"
+                    style="@style/StyleSubTitle" />
+                <EditText
+                    android:id="@+id/etDocumentCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/document_code"
+                    style="@style/StyleEditTextRect" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/comments"
+                    style="@style/StyleSubTitle" />
+                <EditText
+                    android:id="@+id/etComments"
+                    android:layout_width="match_parent"
+                    android:inputType="textCapSentences"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/comments"
+                    style="@style/StyleEditTextRect" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvDocs"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:layout_height="200dp"
+                    tools:listitem="@layout/item_photo_removable"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{listener::onAddArchiveFileClick}"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    style="@style/RoundedBlueBtnStyle"
+                    android:text="@string/upload_file" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <FrameLayout
+            android:id="@+id/flLoading"
+            android:clickable="true"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/loadingBackground">
+            <ProgressBar
+                style="?android:progressBarStyleLarge"
+                android:indeterminate="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </FrameLayout>
+</layout>

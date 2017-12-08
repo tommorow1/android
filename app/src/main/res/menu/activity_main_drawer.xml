@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/gTop"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_map"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_objects"
+            android:title="Объекты на карте" />
+        <item
+            android:id="@+id/nav_catalog"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_catalog"
+            android:title="Каталог обьектов" />
+        <item
+            android:id="@+id/nav_quests"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_quests"
+            android:title="Квесты" />
+    </group>
+    <item android:title=""
+        android:id="@+id/logging_menu">
+        <menu>
+            <item
+                android:id="@+id/nav_favourite"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_election"
+                android:title="@string/favourite" />
+            <item
+                android:id="@+id/nav_my_suggestions"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_suggestions"
+                android:title="@string/my_suggestions" />
+            <item
+                android:id="@+id/nav_notice"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_notice"
+                android:title="@string/notifications" />
+            <item
+                android:id="@+id/nav_message"
+                android:checkable="true"
+                android:visible="false"
+                android:icon="@drawable/ic_menu_message"
+                android:title="Сообщения" />
+            <item
+                android:id="@+id/nav_contacts"
+                android:checkable="true"
+                android:visible="false"
+                android:icon="@drawable/ic_menu_contacts"
+                android:title="Контакты" />
+            <item
+                android:id="@+id/nav_my_quests"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_my_quests"
+                android:title="@string/my_quests" />
+            <item
+                android:id="@+id/nav_my_settings"
+                android:checkable="true"
+                android:icon="@drawable/ic_my_settings"
+                android:title="@string/my_settings" />
+        </menu>
+    </item>
+    <group
+        android:id="@+id/gBottom"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_news"
+            android:checkable="true"
+            android:title="@string/news" />
+        <item
+            android:id="@+id/nav_voting"
+            android:checkable="true"
+            android:title="@string/voting" />
+        <item
+            android:id="@+id/nav_about"
+            android:checkable="true"
+            android:title="@string/about" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:checkable="true"
+            android:title="@string/feedback" />
+    </group>
+</menu>

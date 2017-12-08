@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bloold.buildp">
+
+    <permission
+        android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="RUIN.NET.RU" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ru.ok.android.sdk.OkAuthActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="ok1256634880"
+                    android:scheme="okauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.CatalogObjectDetailsActivity"
+            android:label="@string/title_activity_fullscreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".search.SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar.WithStatus" />
+        <activity
+            android:name=".profile.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".profile.RegistrationActivity"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".profile.RestoreActivity"
+            android:label="@string/title_activity_restore"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".profile.ProfileSettingsActivity"
+            android:label="@string/title_activity_profile_settings"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.AgreementActivity"
+            android:label="@string/title_activity_agreement"
+            android:theme="@style/AppTheme.NoActionBar.WithStatus" />
+        <activity
+            android:name=".ListActivityObjects.ListObjectsActivity"
+            android:label="@string/title_activity_list_objects"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.RouteMapActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar.WithStatus"/>
+        <activity
+            android:name=".ui.ChooseEditFieldActivity"
+            android:label="@string/edit_object_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSimple"/>
+        <activity
+            android:name=".ui.ChooseFiltersActivity"
+            android:label="@string/filters"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSimple"/>
+        <activity
+            android:name=".ui.AddObjectActivity"
+            android:label="@string/add_object_item"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSimple"/>
+        <activity
+            android:name=".ui.ChooseLocationActivity"
+            android:label="@string/choose_location"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSimple"/>
+        <activity
+            android:name=".ui.EditPhotoVideoAudioActivity"
+            android:label="@string/edit_object_title"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSimple"/>
+        <activity
+            android:name=".ui.EditStateActivity"
+            android:label="@string/edit_object_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSimple"/>
+        <activity
+            android:name=".ui.EditArchiveMaterialsActivity"
+            android:label="@string/edit_object_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSimple"/>
+        <activity
+            android:name=".ui.EditPublicationsActivity"
+            android:label="@string/edit_object_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSimple"/>
+        <activity
+            android:name=".ui.SuggestionDetailsActivity"
+            android:label="@string/suggestions"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSimple"/>
+        <activity
+            android:name=".ui.ImageViewActivity"
+            android:label="@string/photo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSimple"/>
+        <activity
+            android:name=".ui.QuestDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <service
+            android:name=".gcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".gcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <activity android:name=".ui.MapActivity"
+            android:label="@string/navigation_drawer_object_in_map"
+            android:theme="@style/AppTheme.NoActionBar.WithStatus" />
+        <activity android:name=".ui.RouteActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:label="@string/route_item"
+            android:theme="@style/AppThemeSimple" />
+        <service
+            android:name=".services.NetworkIntentService"
+            android:exported="false" />
+        <provider
+            android:name=".components.GenericFileProvider"
+            android:authorities="ru.net.ruin.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="80a9563d53b1b6ee5d222357682e316e78268c15" />
+    </application>
+
+</manifest>

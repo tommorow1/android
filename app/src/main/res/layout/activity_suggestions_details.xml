@@ -1,0 +1,87 @@
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/suggestions"
+                style="@style/StyleTitle" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/ivObject"
+                    android:layout_width="@dimen/suggestion_img_size"
+                    android:layout_height="@dimen/suggestion_img_size" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvObjectName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Название объекта"
+                        style="@style/StyleSubTitle" />
+                    <TextView
+                        android:id="@+id/tvSuggestionType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin_half"
+                        tools:text="Тип предложения" />
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        tools:text="Дата"
+                        style="@style/StyleSubTitle" />
+                    <LinearLayout
+                        android:id="@+id/llStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:paddingStart="@dimen/activity_vertical_margin_half"
+                        android:paddingEnd="20dp"
+                        android:background="@drawable/b_flag_green"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/ivStatus"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            app:srcCompat="@drawable/ic_done"/>
+                        <TextView
+                            android:id="@+id/tvStatus"
+                            tools:text="@string/suggestion_status_declined"
+                            android:layout_marginStart="@dimen/activity_vertical_margin_half"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <include layout="@layout/layout_line"/>
+            <LinearLayout
+                android:id="@+id/llChanges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>

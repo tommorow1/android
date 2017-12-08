@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="listener"
+            type="com.example.bloold.buildp.search.SearchActivity"/>
+    </data>
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.bloold.buildp.search.SearchActivity">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+            <Spinner
+                android:id="@+id/spinnerChoice"
+                android:layout_marginStart="@dimen/activity_vertical_margin_half"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+            <include layout="@layout/layout_line"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_vertical_margin_half"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/etChoice"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/object_search"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginEnd="@dimen/activity_vertical_margin_half"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_search_red"
+                    android:textColor="@color/red" />
+                <ImageView
+                    android:id="@+id/ivClear"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:visibility="invisible"
+                    tools:visibility="visible"
+                    android:onClick="@{listener::onClearSearch}"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="@dimen/activity_vertical_margin_half"
+                    app:srcCompat="@drawable/ic_close"/>
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:id="@+id/lvNames"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Показать найденное"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:id="@+id/btnViewFind"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>
